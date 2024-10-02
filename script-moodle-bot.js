@@ -101,7 +101,7 @@
             try {
                 document.getElementById('loading-spinner').style.display = 'block';
                 // ApiCall, hier URL ändern.
-                resp = await myApiCall('https://chatbot.ebwl-oer.de/receive_text', datas);
+                resp = await myApiCall('<your_URL_here>', datas);
                 liste[2].querySelector('textarea').value = resp.received_text;
                 liste[2].querySelector('textarea').readOnly = true;
                 liste[0].querySelector('textarea').readOnly = true;
