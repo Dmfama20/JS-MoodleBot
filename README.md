@@ -35,7 +35,7 @@ Um CORS-Probleme zu vermeiden, wird ein Docker-basierter Proxy verwendet, der di
 - Traefik als Reverse Proxy muss eingerichtet sein. (Siehe [Traefik Webseite](https://traefik.io/)).
 
 
-Die Docker-Umgebung enthält sowohl die `docker-compose.yml` als auch ein `Dockerfile`, die für den Proxy-Server benötigt werden. Der Proxy hilft dabei, Anfragen des JavaScript-Skripts so weiterzuleiten, dass keine CORS-Fehler auftreten. Bitte konfigurieren Sie vor der Benutzung alle nötigen Dateien entsprechend Ihrer Bedürfnisse.
+Die Docker-Umgebung enthält sowohl die `docker-compose.yml` als auch ein `Dockerfile`, die für den Proxy-Server benötigt werden. Der Proxy hilft dabei, Anfragen des JavaScript-Skripts so weiterzuleiten, dass keine CORS-Fehler auftreten. Bitte konfigurieren Sie vor der Benutzung alle nötigen Dateien entsprechend Ihrer Bedürfnisse (URL des Docker Containers, OpenAI-API-Key, Assistant-ID und URL des entsprechenden Moodle-Systems.)
 
 ## Traefik Hinweis
 
