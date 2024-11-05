@@ -1,0 +1,28 @@
+services:
+  api:
+    build:
+      context: .
+      target: builder
+    container_name: fastapi-application-pdfs
+    environment:
+      PORT: 5005
+    ports:
+      - '5005:5005'
+    restart: "no"
+    volumes:
+      - ./app/pdfs:/app/pdfs
+    networks:
+      - reverse-proxy
+    labels:
+      - "traefik.enable=true"
+      - "traefik.frontend.rule=Host:....."
+      - "traefik.http.services.api.loadbalancer.server.port=5005"
+      - "traefik.docker.network=...."
+      - "traefik.http.middlewares.cors.headers.accesscontrolallowmethods=GET,POST"
+      - "traefik.http.middlewares.cors.headers.accesscontrolalloworiginlist=https://<your_moodle_URL>"
+      - "traefik.http.middlewares.cors.headers.accesscontrolmaxage=100"
+      - "traefik.http.middlewares.cors.headers.addvaryheader=true"
+
+networks:
+  <network-name>:
+    external: true   
